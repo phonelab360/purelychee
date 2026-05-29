@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PureLychee | Premium Organic Lychee Store</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Fontawesome -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+<style>
+
+body{
+font-family:'Hind Siliguri',sans-serif;
+background:#071018;
+color:white;
+overflow-x:hidden;
+}
+
+/* Glass Effect */
+
+.glass{
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(12px);
+border:1px solid rgba(255,255,255,0.1);
+box-shadow:0 8px 32px rgba(0,0,0,0.3);
+}
+
+/* Slider */
+
+.slider img{
+animation:zoom 8s infinite alternate;
+}
+
+@keyframes zoom{
+0%{transform:scale(1);}
+100%{transform:scale(1.08);}
+}
+
+/* Product Card Hover */
+
+.product-card{
+transition:0.4s;
+}
+
+.product-card:hover{
+transform:translateY(-8px);
+box-shadow:0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* Modal */
+
+.modal{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.7);
+z-index:9999;
+justify-content:center;
+align-items:center;
+padding:20px;
+}
+
+.modal-content{
+width:100%;
+max-width:500px;
+border-radius:20px;
+padding:25px;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+width:6px;
+}
+
+::-webkit-scrollbar-thumb{
+background:#84cc16;
+border-radius:20px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="fixed top-0 left-0 w-full z-50 glass">
+
+<div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+
+<div class="flex items-center gap-3">
+
+<img src="https://i.postimg.cc/tCZ2jLqg/lychee-logo.png"
+class="w-12 h-12 rounded-full">
+
+<div>
+
+<h1 class="text-2xl font-bold text-lime-400">
+PureLychee
+</h1>
+
+<p class="text-sm text-gray-300">
+১০০% ন্যাচারাল ও ফ্রেশ
+</p>
+
+</div>
+
+</div>
+
+<a href="#products"
+class="bg-lime-500 hover:bg-lime-600 px-5 py-3 rounded-full font-bold text-black">
+
+অর্ডার করুন
+
+</a>
+
+</div>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="pt-32 pb-20 px-5">
+
+<div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+
+<!-- Left -->
+
+<div>
+
+<h1 class="text-5xl md:text-6xl font-bold leading-tight">
+
+PureLychee:
+<br>
+
+<span class="text-lime-400">
+বাগান থেকে সরাসরি
+</span>
+
+</h1>
+
+<p class="mt-6 text-gray-300 text-lg leading-8">
+
+১০০% ন্যাচারাল, ফ্রেশ এবং কেমিক্যাল ফ্রি লিচু।
+রাজশাহীর বাগান থেকে সরাসরি আপনার বাসায়।
+
+</p>
+
+<div class="mt-8 flex gap-4 flex-wrap">
+
+<a href="#products"
+class="bg-lime-500 text-black px-8 py-4 rounded-full font-bold">
+
+এখনই অর্ডার করুন
+
+</a>
+
+<a href="https://wa.me/8801878877746"
+class="glass px-8 py-4 rounded-full">
+
+WhatsApp
+
+</a>
+
+</div>
+
+<!-- Features -->
+
+<div class="grid grid-cols-2 gap-4 mt-10">
+
+<div class="glass p-4 rounded-2xl">
+<i class="fa-solid fa-truck-fast text-lime-400 text-2xl"></i>
+<h3 class="mt-2 font-bold">ফাস্ট ডেলিভারি</h3>
+</div>
+
+<div class="glass p-4 rounded-2xl">
+<i class="fa-solid fa-leaf text-lime-400 text-2xl"></i>
+<h3 class="mt-2 font-bold">অর্গানিক</h3>
+</div>
+
+<div class="glass p-4 rounded-2xl">
+<i class="fa-solid fa-shield-heart text-lime-400 text-2xl"></i>
+<h3 class="mt-2 font-bold">ফ্রেশ গ্যারান্টি</h3>
+</div>
+
+<div class="glass p-4 rounded-2xl">
+<i class="fa-solid fa-box text-lime-400 text-2xl"></i>
+<h3 class="mt-2 font-bold">প্রিমিয়াম প্যাকেজিং</h3>
+</div>
+
+</div>
+
+</div>
+
+<!-- Right Slider -->
+
+<div class="slider">
+
+<img id="heroSlider"
+src="https://images.unsplash.com/photo-1596591868231-05e17f3c2c14?q=80&w=1200&auto=format&fit=crop"
+class="rounded-3xl shadow-2xl w-full h-[500px] object-cover">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PRODUCTS -->
+
+<section id="products" class="py-20 px-5">
+
+<div class="max-w-7xl mx-auto">
+
+<h2 class="text-4xl font-bold text-center mb-14">
+
+আমাদের প্রিমিয়াম লিচু প্যাকেজ
+
+</h2>
+
+<div class="grid md:grid-cols-4 sm:grid-cols-2 gap-6">
+
+<!-- PRODUCT -->
+
+<script>
+
+const products = [
+
+{
+title:"Premium Lychee Box",
+price:1200,
+img:"https://images.unsplash.com/photo-1596591868231-05e17f3c2c14?q=80&w=1200&auto=format&fit=crop"
+},
+
+{
+title:"Organic Lychee Pack",
+price:900,
+img:"https://images.unsplash.com/photo-1626200419199-bf7dc5c5fbc2?q=80&w=1200&auto=format&fit=crop"
+},
+
+{
+title:"Fresh Garden Lychee",
+price:1400,
+img:"https://images.unsplash.com/photo-1619566636858-adf3ef46400b?q=80&w=1200&auto=format&fit=crop"
+},
+
+{
+title:"Royal Lychee Basket",
+price:1800,
+img:"https://images.unsplash.com/photo-1623065422902-30a2d299bbe4?q=80&w=1200&auto=format&fit=crop"
+},
+
+{
+title:"Mini Lychee Pack",
+price:700,
+img:"https://images.unsplash.com/photo-1596591868231-05e17f3c2c14?q=80&w=1200&auto=format&fit=crop"
+},
+
+{
+title:"Family Combo",
+price:2200,
+img:"https://images.unsplash.com/photo-1626200419199-bf7dc5c5fbc2?q=80&w=1200&auto=format&fit=crop"
+},
+
+{
+title:"Export Quality Lychee",
+price:2500,
+img:"https://images.unsplash.com/photo-1619566636858-adf3ef46400b?q=80&w=1200&auto=format&fit=crop"
+},
+
+{
+title:"Premium Gift Box",
+price:3000,
+img:"https://images.unsplash.com/photo-1623065422902-30a2d299bbe4?q=80&w=1200&auto=format&fit=crop"
+}
+
+];
+
+document.write(products.map((p,i)=>`
+
+<div class="glass rounded-3xl overflow-hidden product-card">
+
+<img src="${p.img}"
+class="w-full h-56 object-cover">
+
+<div class="p-5">
+
+<h3 class="text-2xl font-bold">
+${p.title}
+</h3>
+
+<p class="text-lime-400 text-xl mt-2">
+৳ ${p.price}
+</p>
+
+<button onclick="openOrder(${i})"
+class="w-full mt-5 bg-lime-500 hover:bg-lime-600 text-black py-3 rounded-xl font-bold">
+
+অর্ডার করুন
+
+</button>
+
+</div>
+
+</div>
+
+`).join(''))
+
+</script>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ORDER MODAL -->
+
+<div class="modal" id="orderModal">
+
+<div class="modal-content glass">
+
+<div class="flex justify-between items-center mb-6">
+
+<h2 class="text-3xl font-bold">
+অর্ডার ফর্ম
+</h2>
+
+<button onclick="closeOrder()">
+<i class="fa-solid fa-xmark text-2xl"></i>
+</button>
+
+</div>
+
+<form id="orderForm" class="space-y-4">
+
+<input type="text"
+id="name"
+placeholder="আপনার নাম"
+required
+class="w-full p-4 rounded-xl bg-black/30 border border-white/10">
+
+<input type="tel"
+id="phone"
+placeholder="মোবাইল নাম্বার"
+required
+class="w-full p-4 rounded-xl bg-black/30 border border-white/10">
+
+<textarea id="address"
+placeholder="সম্পূর্ণ ঠিকানা"
+required
+class="w-full p-4 rounded-xl bg-black/30 border border-white/10"></textarea>
+
+<select id="product"
+class="w-full p-4 rounded-xl bg-black text-white">
+
+</select>
+
+<input type="number"
+id="qty"
+value="1"
+min="1"
+class="w-full p-4 rounded-xl bg-black/30 border border-white/10">
+
+<select id="shipping"
+class="w-full p-4 rounded-xl bg-black text-white">
+
+<option value="80">ঢাকার ভিতরে - 80৳</option>
+
+<option value="150">ঢাকার বাইরে - 150৳</option>
+
+</select>
+
+<select id="payment"
+class="w-full p-4 rounded-xl bg-black text-white">
+
+<option>Cash On Delivery</option>
+
+<option>bKash</option>
+
+<option>Nagad</option>
+
+</select>
+
+<input type="text"
+id="trxid"
+placeholder="Transaction ID (Optional)"
+class="w-full p-4 rounded-xl bg-black/30 border border-white/10">
+
+<div class="glass p-4 rounded-xl">
+
+<h3 class="text-2xl font-bold">
+
+মোট মূল্য:
+<span id="totalPrice">
+৳ 0
+</span>
+
+</h3>
+
+</div>
+
+<button type="submit"
+class="w-full bg-lime-500 text-black py-4 rounded-xl font-bold text-xl">
+
+অর্ডার কনফার্ম করুন
+
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+<!-- FOOTER -->
+
+<footer class="py-10 text-center border-t border-white/10">
+
+<h3 class="text-2xl font-bold text-lime-400">
+PureLychee
+</h3>
+
+<p class="mt-3 text-gray-400">
+
+Email:
+babult.agro2023@gmail.com
+
+</p>
+
+<p class="text-gray-400">
+
+WhatsApp:
++8801878877746
+
+</p>
+
+<div class="mt-5">
+
+<a href="https://phonelab360.github.io/webnestbd/"
+target="_blank"
+class="text-lime-400 font-bold">
+
+Designed & Developed By WebNest BD
+
+</a>
+
+</div>
+
+</footer>
+
+<script>
+
+/* =========================
+CONFIG
+========================= */
+
+const CONFIG = {
+
+telegramBotToken:"YOUR_BOT_TOKEN",
+
+telegramChatId:"YOUR_CHAT_ID",
+
+googleFormAction:
+"YOUR_GOOGLE_FORM_URL"
+
+};
+
+/* =========================
+SLIDER
+========================= */
+
+const sliderImages = [
+
+"https://images.unsplash.com/photo-1596591868231-05e17f3c2c14?q=80&w=1200&auto=format&fit=crop",
+
+"https://images.unsplash.com/photo-1626200419199-bf7dc5c5fbc2?q=80&w=1200&auto=format&fit=crop",
+
+"https://images.unsplash.com/photo-1619566636858-adf3ef46400b?q=80&w=1200&auto=format&fit=crop"
+
+];
+
+let current = 0;
+
+setInterval(()=>{
+
+current++;
+
+if(current >= sliderImages.length){
+current = 0;
+}
+
+document.getElementById('heroSlider').src =
+sliderImages[current];
+
+},3000);
+
+/* =========================
+ORDER MODAL
+========================= */
+
+const modal =
+document.getElementById('orderModal');
+
+const productSelect =
+document.getElementById('product');
+
+products.forEach((p,i)=>{
+
+let option =
+document.createElement('option');
+
+option.value = i;
+
+option.textContent =
+`${p.title} - ৳${p.price}`;
+
+productSelect.appendChild(option);
+
+});
+
+function openOrder(i){
+
+modal.style.display = 'flex';
+
+productSelect.value = i;
+
+calculateTotal();
+
+}
+
+function closeOrder(){
+
+modal.style.display = 'none';
+
+}
+
+/* =========================
+PRICE CALCULATION
+========================= */
+
+const qty =
+document.getElementById('qty');
+
+const shipping =
+document.getElementById('shipping');
+
+qty.addEventListener('input',calculateTotal);
+shipping.addEventListener('change',calculateTotal);
+productSelect.addEventListener('change',calculateTotal);
+
+function calculateTotal(){
+
+let product =
+products[productSelect.value];
+
+let total =
+(product.price * qty.value)
++
+parseInt(shipping.value);
+
+document.getElementById('totalPrice')
+.innerText = `৳ ${total}`;
+
+return total;
+
+}
+
+calculateTotal();
+
+/* =========================
+FORM SUBMIT
+========================= */
+
+document.getElementById('orderForm')
+.addEventListener('submit',
+async function(e){
+
+e.preventDefault();
+
+let product =
+products[productSelect.value];
+
+let total = calculateTotal();
+
+const data = {
+
+name:
+document.getElementById('name').value,
+
+phone:
+document.getElementById('phone').value,
+
+address:
+document.getElementById('address').value,
+
+product:
+product.title,
+
+qty:
+qty.value,
+
+shipping:
+shipping.options[
+shipping.selectedIndex
+].text,
+
+payment:
+document.getElementById('payment').value,
+
+trxid:
+document.getElementById('trxid').value,
+
+total
+
+};
+
+/* Telegram */
+
+const message = `
+🛒 নতুন অর্ডার
+
+👤 নাম: ${data.name}
+
+📞 ফোন: ${data.phone}
+
+📦 পণ্য: ${data.product}
+
+🔢 পরিমাণ: ${data.qty}
+
+🚚 ডেলিভারি: ${data.shipping}
+
+💳 পেমেন্ট: ${data.payment}
+
+🆔 TrxID: ${data.trxid}
+
+💰 মোট: ৳${data.total}
+
+📍 ঠিকানা:
+${data.address}
+`;
+
+fetch(`https://api.telegram.org/bot${CONFIG.telegramBotToken}/sendMessage`,{
+
+method:'POST',
+
+headers:{
+'Content-Type':'application/json'
+},
+
+body:JSON.stringify({
+
+chat_id:
+CONFIG.telegramChatId,
+
+text:message
+
+})
+
+});
+
+/* Google Form */
+
+const formData = new FormData();
+
+formData.append(
+'entry.111111111',
+data.name
+);
+
+formData.append(
+'entry.222222222',
+data.phone
+);
+
+formData.append(
+'entry.333333333',
+data.address
+);
+
+formData.append(
+'entry.444444444',
+data.product
+);
+
+formData.append(
+'entry.555555555',
+data.qty
+);
+
+formData.append(
+'entry.666666666',
+data.total
+);
+
+fetch(CONFIG.googleFormAction,{
+method:'POST',
+body:formData,
+mode:'no-cors'
+});
+
+alert("অর্ডার সফলভাবে সাবমিট হয়েছে!");
+
+closeOrder();
+
+document.getElementById('orderForm').reset();
+
+calculateTotal();
+
+});
+
+</script>
+
+</body>
+</html>
