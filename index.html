@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html lang="bn">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>PureLychee | Premium Lychee Store</title>
+<title>
+PureLychee | Premium Organic Lychee Store
+</title>
 
-<!-- Google Font -->
-<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!-- GOOGLE FONT -->
 
-<!-- Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- FONT AWESOME -->
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
 
 <style>
 
@@ -22,25 +29,34 @@ scroll-behavior:smooth;
 }
 
 body{
+
 font-family:'Hind Siliguri',sans-serif;
 
 background:
-radial-gradient(circle at top left,#fff7ed 0%,transparent 30%),
-radial-gradient(circle at bottom right,#fde68a 0%,transparent 30%),
-linear-gradient(135deg,#fffdf7,#fff7ed,#fffbeb);
+linear-gradient(
+135deg,
+#fff7ed,
+#fffbeb,
+#fef3c7
+);
 
 color:#1f2937;
+
+overflow-x:hidden;
 }
 
 /* NAVBAR */
 
 header{
+
 position:sticky;
 top:0;
+
 z-index:999;
 
-background:rgba(255,255,255,0.75);
-backdrop-filter:blur(12px);
+background:rgba(255,255,255,0.7);
+
+backdrop-filter:blur(15px);
 
 padding:15px 5%;
 
@@ -48,128 +64,186 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 
-box-shadow:0 5px 20px rgba(0,0,0,0.08);
+box-shadow:0 5px 25px rgba(0,0,0,0.08);
 }
 
 .logo{
-font-size:30px;
+
+font-size:34px;
 font-weight:700;
-color:#f97316;
+
+color:#ea580c;
 }
 
 .nav-btn{
-background:linear-gradient(135deg,#f59e0b,#f97316);
 
-padding:12px 25px;
+padding:13px 30px;
 
 border-radius:50px;
 
+background:
+linear-gradient(
+135deg,
+#f59e0b,
+#ea580c
+);
+
 color:white;
+
 font-weight:600;
+
+text-decoration:none;
 }
 
 /* HERO */
 
 .hero{
-padding:70px 5%;
+
+padding:80px 5%;
 
 display:grid;
 grid-template-columns:1fr 1fr;
-align-items:center;
+
 gap:50px;
+align-items:center;
 }
 
 .hero-text h1{
-font-size:55px;
+
+font-size:60px;
 line-height:1.2;
 margin-bottom:20px;
 }
 
 .hero-text span{
-color:#f97316;
+color:#ea580c;
 }
 
 .hero-text p{
+
 font-size:18px;
-line-height:1.8;
-margin-bottom:30px;
+line-height:1.9;
+
 color:#4b5563;
+
+margin-bottom:35px;
 }
 
 .hero-btn{
+
 display:inline-block;
 
-padding:15px 35px;
+padding:16px 35px;
 
-background:linear-gradient(135deg,#f59e0b,#f97316);
+background:
+linear-gradient(
+135deg,
+#f59e0b,
+#ea580c
+);
 
 color:white;
 
 border-radius:50px;
 
+text-decoration:none;
+
 font-weight:600;
 }
 
-.hero-slider{
-position:relative;
-height:450px;
-overflow:hidden;
-border-radius:30px;
+/* HERO IMAGE */
 
-box-shadow:0 20px 50px rgba(0,0,0,0.15);
+.hero-image{
+
+position:relative;
+
+height:500px;
+
+overflow:hidden;
+
+border-radius:35px;
+
+box-shadow:
+0 20px 50px rgba(0,0,0,0.15);
 }
 
-.hero-slider img{
+.hero-image img{
+
 position:absolute;
+
 width:100%;
 height:100%;
+
 object-fit:cover;
 
 animation:slider 16s infinite;
+
 opacity:0;
 }
 
-.hero-slider img:nth-child(1){
+.hero-image img:nth-child(1){
 animation-delay:0s;
 }
 
-.hero-slider img:nth-child(2){
+.hero-image img:nth-child(2){
 animation-delay:4s;
 }
 
-.hero-slider img:nth-child(3){
+.hero-image img:nth-child(3){
 animation-delay:8s;
 }
 
-.hero-slider img:nth-child(4){
+.hero-image img:nth-child(4){
 animation-delay:12s;
 }
 
 @keyframes slider{
-0%{opacity:0;}
-10%{opacity:1;}
-25%{opacity:1;}
-35%{opacity:0;}
-100%{opacity:0;}
+
+0%{
+opacity:0;
+transform:scale(1);
 }
 
-/* SECTION */
+10%{
+opacity:1;
+}
+
+25%{
+opacity:1;
+transform:scale(1.05);
+}
+
+35%{
+opacity:0;
+}
+
+100%{
+opacity:0;
+}
+}
+
+/* SECTION TITLE */
 
 .section-title{
+
 text-align:center;
+
 font-size:42px;
-margin-top:50px;
-margin-bottom:40px;
+
+margin-bottom:50px;
+
 color:#111827;
 }
 
 /* PRODUCTS */
 
 .products{
-padding:40px 5%;
+
+padding:80px 5%;
 }
 
 .product-grid{
+
 display:grid;
 
 grid-template-columns:
@@ -179,13 +253,12 @@ gap:30px;
 }
 
 .product-card{
-background: rgba(255,255,255,0.75);
 
-backdrop-filter: blur(12px);
+background:rgba(255,255,255,0.75);
 
-border:1px solid rgba(255,255,255,0.4);
+backdrop-filter:blur(12px);
 
-border-radius:25px;
+border-radius:28px;
 
 overflow:hidden;
 
@@ -196,46 +269,66 @@ transition:0.4s ease;
 }
 
 .product-card:hover{
+
 transform:translateY(-10px);
 }
 
 .product-card img{
+
 width:100%;
-height:250px;
+height:260px;
+
 object-fit:cover;
 }
 
 .product-content{
+
 padding:25px;
 }
 
 .product-content h3{
-font-size:25px;
-margin-bottom:10px;
+
+font-size:26px;
+
+margin-bottom:12px;
 }
 
 .product-content p{
+
 color:#4b5563;
-line-height:1.7;
-margin-bottom:15px;
+
+line-height:1.8;
+
+margin-bottom:18px;
 }
 
 .price{
-font-size:26px;
+
+font-size:28px;
+
 font-weight:700;
-color:#f97316;
+
+color:#ea580c;
+
 margin-bottom:20px;
 }
 
 .order-btn{
+
 width:100%;
-padding:14px;
+
+padding:15px;
 
 border:none;
 
-border-radius:14px;
+border-radius:15px;
 
-background: linear-gradient(135deg,#f59e0b,#f97316);
+background:
+linear-gradient(
+135deg,
+#f59e0b,
+#ea580c
+);
 
 color:white;
 
@@ -245,79 +338,326 @@ font-weight:600;
 cursor:pointer;
 }
 
+/* REVIEW */
+
+.reviews{
+
+padding:80px 5%;
+}
+
+.review-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(280px,1fr));
+
+gap:30px;
+}
+
+.review-card{
+
+background:white;
+
+padding:30px;
+
+border-radius:25px;
+
+box-shadow:
+0 10px 30px rgba(0,0,0,0.08);
+
+text-align:center;
+}
+
+.review-card img{
+
+width:90px;
+height:90px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+margin-bottom:15px;
+}
+
+.review-card h3{
+
+margin-bottom:10px;
+}
+
+.stars{
+
+color:#f59e0b;
+
+font-size:22px;
+
+margin-bottom:15px;
+}
+
+.review-card p{
+
+line-height:1.8;
+
+color:#4b5563;
+}
+
 /* PAYMENT */
 
 .payment{
+
 padding:70px 5%;
 }
 
 .payment-box{
+
 background:white;
+
 padding:40px;
+
 border-radius:30px;
 
-box-shadow:0 15px 40px rgba(0,0,0,0.08);
+box-shadow:
+0 10px 30px rgba(0,0,0,0.08);
 
 text-align:center;
 }
 
 .payment-box h2{
+
+font-size:38px;
+
 margin-bottom:20px;
-font-size:35px;
 }
 
 .payment-icons{
+
 display:flex;
 justify-content:center;
-gap:25px;
-margin-top:25px;
+
+gap:20px;
+
 flex-wrap:wrap;
+
+margin-top:25px;
 }
 
 .payment-icons div{
+
+padding:18px 28px;
+
 background:#fff7ed;
-padding:20px 30px;
-border-radius:20px;
+
+border-radius:18px;
+
 font-size:20px;
+
 font-weight:600;
 }
 
 /* CONTACT */
 
 .contact{
+
 padding:70px 5%;
+
 text-align:center;
 }
 
 .contact h2{
-font-size:38px;
+
+font-size:40px;
+
 margin-bottom:20px;
 }
 
 .contact p{
+
 font-size:18px;
-margin-bottom:12px;
+
+margin-bottom:15px;
 }
 
 /* FOOTER */
 
 footer{
+
 background:#111827;
+
 padding:25px;
+
 text-align:center;
+
 color:white;
-margin-top:50px;
 }
 
 footer a{
+
 color:#facc15;
+
 text-decoration:none;
+
 font-weight:600;
+}
+
+/* MODAL */
+
+.modal{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,0.65);
+
+display:none;
+
+justify-content:center;
+align-items:center;
+
+padding:20px;
+
+z-index:9999;
+}
+
+.modal-box{
+
+background:white;
+
+width:100%;
+max-width:550px;
+
+padding:30px;
+
+border-radius:30px;
+
+position:relative;
+}
+
+.close{
+
+position:absolute;
+
+right:20px;
+top:15px;
+
+font-size:35px;
+
+cursor:pointer;
+}
+
+.modal-box h2{
+
+margin-bottom:25px;
+
+text-align:center;
+}
+
+.modal-box form{
+
+display:flex;
+flex-direction:column;
+
+gap:18px;
+}
+
+.modal-box input,
+.modal-box textarea,
+.modal-box select{
+
+padding:15px;
+
+border-radius:14px;
+
+border:1px solid #ddd;
+
+font-size:16px;
+}
+
+/* PAYMENT METHOD */
+
+.payment-methods{
+
+display:grid;
+
+gap:15px;
+}
+
+.payment-card{
+
+border:2px solid #eee;
+
+padding:15px;
+
+border-radius:18px;
+
+cursor:pointer;
+
+transition:0.3s;
+}
+
+.payment-card:hover{
+
+border-color:#ea580c;
+
+background:#fff7ed;
+}
+
+.payment-card div{
+
+display:flex;
+align-items:center;
+
+gap:15px;
+}
+
+/* TOTAL */
+
+.total-box{
+
+background:#fff7ed;
+
+padding:18px;
+
+border-radius:15px;
+
+text-align:center;
+}
+
+/* SUBMIT */
+
+.submit-btn{
+
+padding:16px;
+
+border:none;
+
+border-radius:15px;
+
+background:
+linear-gradient(
+135deg,
+#f59e0b,
+#ea580c
+);
+
+color:white;
+
+font-size:18px;
+
+font-weight:600;
+
+cursor:pointer;
 }
 
 /* WHATSAPP */
 
 .whatsapp{
+
 position:fixed;
 
 right:20px;
@@ -350,10 +690,10 @@ grid-template-columns:1fr;
 }
 
 .hero-text h1{
-font-size:38px;
+font-size:42px;
 }
 
-.hero-slider{
+.hero-image{
 height:320px;
 }
 
@@ -364,6 +704,7 @@ font-size:32px;
 }
 
 </style>
+
 </head>
 
 <body>
@@ -389,31 +730,38 @@ PureLychee
 <div class="hero-text">
 
 <h1>
+
 <span>PureLychee</span><br>
+
 বাগান থেকে সরাসরি,<br>
 ১০০% ন্যাচারাল ও ফ্রেশ।
+
 </h1>
 
 <p>
-বাংলাদেশের সেরা মানের ফ্রেশ, মিষ্টি ও রসালো লিচু এখন আপনার ঘরে বসেই অর্ডার করুন। 
-সরাসরি বাগান থেকে সংগ্রহ করে দ্রুত ডেলিভারি।
+
+রাজশাহীর বাগান থেকে সরাসরি সংগ্রহ করা 
+ফ্রেশ, রসালো ও মিষ্টি লিচু এখন ঘরে বসেই অর্ডার করুন।
+
 </p>
 
 <a href="#products" class="hero-btn">
+
 এখনই অর্ডার করুন
+
 </a>
 
 </div>
 
-<div class="hero-slider">
+<div class="hero-image">
 
 <img src="https://images.unsplash.com/photo-1621263764928-df1444c5e859?q=80&w=1200&auto=format&fit=crop">
-
-<img src="https://images.unsplash.com/photo-1596591868231-05e4c4c0c4e1?q=80&w=1200&auto=format&fit=crop">
 
 <img src="https://images.unsplash.com/photo-1587735243615-c03f25aaff15?q=80&w=1200&auto=format&fit=crop">
 
 <img src="https://images.unsplash.com/photo-1574226516831-e1dff420e37f?q=80&w=1200&auto=format&fit=crop">
+
+<img src="https://images.unsplash.com/photo-1596591868231-05e4c4c0c4e1?q=80&w=1200&auto=format&fit=crop">
 
 </div>
 
@@ -424,12 +772,15 @@ PureLychee
 <section class="products" id="products">
 
 <h2 class="section-title">
+
 আমাদের জনপ্রিয় লিচু প্যাকেজ
+
 </h2>
 
 <div class="product-grid">
 
-<!-- Product 1 -->
+<!-- PRODUCT 1 -->
+
 <div class="product-card">
 
 <img src="https://images.unsplash.com/photo-1621263764928-df1444c5e859?q=80&w=1200&auto=format&fit=crop">
@@ -439,143 +790,181 @@ PureLychee
 <h3>Premium Fresh Lychee</h3>
 
 <p>
-বাগান থেকে সরাসরি সংগ্রহ করা ফ্রেশ ও মিষ্টি লিচু।
+সরাসরি বাগান থেকে সংগ্রহ করা রসালো ও মিষ্টি লিচু।
 </p>
 
 <div class="price">
 ৳850 / Box
 </div>
 
-<button class="order-btn">
+<button class="order-btn"
+onclick="openModal()">
+
 অর্ডার করুন
+
 </button>
 
 </div>
 
 </div>
 
-<!-- Product 2 -->
-<div class="product-card">
+<!-- PRODUCT 2 -->
 
-<img src="https://images.unsplash.com/photo-1596591868231-05e4c4c0c4e1?q=80&w=1200&auto=format&fit=crop">
-
-<div class="product-content">
-
-<h3>Organic Lychee Pack</h3>
-
-<p>
-১০০% ন্যাচারাল ও কেমিক্যাল ফ্রি লিচু।
-</p>
-
-<div class="price">
-৳950 / Box
-</div>
-
-<button class="order-btn">
-অর্ডার করুন
-</button>
-
-</div>
-
-</div>
-
-<!-- Product 3 -->
-<div class="product-card">
-
-<img src="https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?q=80&w=1200&auto=format&fit=crop">
-
-<div class="product-content">
-
-<h3>Garden Fresh Lychee</h3>
-
-<p>
-সরাসরি বাগান থেকে সংগ্রহ করা জুসি লিচু।
-</p>
-
-<div class="price">
-৳780 / Box
-</div>
-
-<button class="order-btn">
-অর্ডার করুন
-</button>
-
-</div>
-
-</div>
-
-<!-- Product 4 -->
-<div class="product-card">
-
-<img src="https://images.unsplash.com/photo-1619566636858-adf3ef46400b?q=80&w=1200&auto=format&fit=crop">
-
-<div class="product-content">
-
-<h3>Red Premium Lychee</h3>
-
-<p>
-বড় সাইজের সুস্বাদু ও রসালো লিচু।
-</p>
-
-<div class="price">
-৳990 / Box
-</div>
-
-<button class="order-btn">
-অর্ডার করুন
-</button>
-
-</div>
-
-</div>
-
-<!-- Product 5 -->
 <div class="product-card">
 
 <img src="https://images.unsplash.com/photo-1587735243615-c03f25aaff15?q=80&w=1200&auto=format&fit=crop">
 
 <div class="product-content">
 
-<h3>Natural Sweet Lychee</h3>
+<h3>Organic Sweet Lychee</h3>
 
 <p>
-সেরা মানের মিষ্টি ও ফ্রেশ লিচু।
+১০০% ন্যাচারাল ও কেমিক্যাল ফ্রি প্রিমিয়াম লিচু।
 </p>
 
 <div class="price">
-৳870 / Box
+৳950 / Box
 </div>
 
-<button class="order-btn">
+<button class="order-btn"
+onclick="openModal()">
+
 অর্ডার করুন
+
 </button>
 
 </div>
 
 </div>
 
-<!-- Product 6 -->
+<!-- PRODUCT 3 -->
+
 <div class="product-card">
 
 <img src="https://images.unsplash.com/photo-1574226516831-e1dff420e37f?q=80&w=1200&auto=format&fit=crop">
 
 <div class="product-content">
 
-<h3>Juicy Lychee Combo</h3>
+<h3>Garden Fresh Combo</h3>
 
 <p>
-পরিবারের জন্য পারফেক্ট ফ্রেশ লিচু প্যাক।
+পরিবারের জন্য বড় ফ্যামিলি প্যাক লিচু কম্বো।
 </p>
 
 <div class="price">
 ৳1100 / Box
 </div>
 
-<button class="order-btn">
+<button class="order-btn"
+onclick="openModal()">
+
 অর্ডার করুন
+
 </button>
 
 </div>
+
+</div>
+
+<!-- PRODUCT 4 -->
+
+<div class="product-card">
+
+<img src="https://images.unsplash.com/photo-1596591868231-05e4c4c0c4e1?q=80&w=1200&auto=format&fit=crop">
+
+<div class="product-content">
+
+<h3>Royal Red Lychee</h3>
+
+<p>
+বড় সাইজের সুস্বাদু ও এক্সপোর্ট কোয়ালিটি লিচু।
+</p>
+
+<div class="price">
+৳1250 / Box
+</div>
+
+<button class="order-btn"
+onclick="openModal()">
+
+অর্ডার করুন
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- REVIEWS -->
+
+<section class="reviews">
+
+<h2 class="section-title">
+
+গ্রাহকদের মতামত
+
+</h2>
+
+<div class="review-grid">
+
+<div class="review-card">
+
+<img src="https://randomuser.me/api/portraits/men/32.jpg">
+
+<h3>Rakib Hasan</h3>
+
+<div class="stars">
+★★★★★
+</div>
+
+<p>
+
+লিচুগুলো অনেক ফ্রেশ ছিল।
+স্বাদও দারুণ ছিল।
+
+</p>
+
+</div>
+
+<div class="review-card">
+
+<img src="https://randomuser.me/api/portraits/women/45.jpg">
+
+<h3>Nusrat Jahan</h3>
+
+<div class="stars">
+★★★★★
+</div>
+
+<p>
+
+প্যাকেজিং খুব সুন্দর ছিল।
+ডেলিভারিও দ্রুত পেয়েছি।
+
+</p>
+
+</div>
+
+<div class="review-card">
+
+<img src="https://randomuser.me/api/portraits/men/51.jpg">
+
+<h3>Mahin Chowdhury</h3>
+
+<div class="stars">
+★★★★★
+</div>
+
+<p>
+
+সত্যিই বাগানের ফ্রেশ লিচুর মতো ছিল।
+আবার অর্ডার করবো।
+
+</p>
 
 </div>
 
@@ -590,11 +979,15 @@ PureLychee
 <div class="payment-box">
 
 <h2>
+
 পেমেন্ট মেথড
+
 </h2>
 
 <p>
+
 Cash On Delivery এবং মোবাইল ব্যাংকিং সুবিধা।
+
 </p>
 
 <div class="payment-icons">
@@ -625,17 +1018,27 @@ Nagad
 <section class="contact">
 
 <h2>
+
 যোগাযোগ করুন
+
 </h2>
 
 <p>
+
 <i class="fa-brands fa-whatsapp"></i>
-WhatsApp: +8801878877746
+
+WhatsApp:
++8801878877746
+
 </p>
 
 <p>
+
 <i class="fa-solid fa-envelope"></i>
-Email: babult.agro2023@gmail.com
+
+Email:
+babult.agro2023@gmail.com
+
 </p>
 
 </section>
@@ -645,21 +1048,191 @@ Email: babult.agro2023@gmail.com
 <footer>
 
 <p>
-© 2026 PureLychee | Designed & Developed By 
-<a href="https://phonelab360.github.io/webnestbd/" target="_blank">
+
+© 2026 PureLychee |
+Designed & Developed By
+
+<a href="https://phonelab360.github.io/webnestbd/"
+target="_blank">
+
 WebNest BD
+
 </a>
+
 </p>
 
 </footer>
 
+<!-- MODAL -->
+
+<div class="modal" id="modal">
+
+<div class="modal-box">
+
+<span class="close"
+onclick="closeModal()">
+
+&times;
+
+</span>
+
+<h2>
+
+অর্ডার করুন
+
+</h2>
+
+<form>
+
+<input type="text"
+placeholder="আপনার নাম">
+
+<input type="number"
+placeholder="মোবাইল নাম্বার">
+
+<textarea
+placeholder="সম্পূর্ণ ঠিকানা"></textarea>
+
+<select>
+
+<option>
+Premium Fresh Lychee
+</option>
+
+<option>
+Organic Sweet Lychee
+</option>
+
+<option>
+Garden Fresh Combo
+</option>
+
+<option>
+Royal Red Lychee
+</option>
+
+</select>
+
+<input type="number"
+placeholder="পরিমাণ">
+
+<select>
+
+<option>
+ঢাকার ভিতরে - ৳80
+</option>
+
+<option>
+ঢাকার বাইরে - ৳150
+</option>
+
+</select>
+
+<h3>
+পেমেন্ট মেথড
+</h3>
+
+<div class="payment-methods">
+
+<label class="payment-card">
+
+<div>
+
+<input type="radio"
+name="payment">
+
+<span>
+Cash On Delivery
+</span>
+
+</div>
+
+</label>
+
+<label class="payment-card">
+
+<div>
+
+<input type="radio"
+name="payment">
+
+<span>
+bKash
+</span>
+
+</div>
+
+</label>
+
+<label class="payment-card">
+
+<div>
+
+<input type="radio"
+name="payment">
+
+<span>
+Nagad
+</span>
+
+</div>
+
+</label>
+
+</div>
+
+<input type="text"
+placeholder="Transaction ID">
+
+<div class="total-box">
+
+<h3>
+
+সর্বমোট:
+৳1030
+
+</h3>
+
+</div>
+
+<button class="submit-btn">
+
+অর্ডার কনফার্ম করুন
+
+</button>
+
+</form>
+
+</div>
+
+</div>
+
 <!-- WHATSAPP -->
 
-<a href="https://wa.me/8801878877746" class="whatsapp">
+<a href="https://wa.me/8801878877746"
+class="whatsapp">
 
 <i class="fa-brands fa-whatsapp"></i>
 
 </a>
+
+<script>
+
+function openModal(){
+
+document.getElementById('modal')
+.style.display='flex';
+
+}
+
+function closeModal(){
+
+document.getElementById('modal')
+.style.display='none';
+
+}
+
+</script>
 
 </body>
 </html>
